@@ -25,8 +25,8 @@ let backtickString = `Hello, World!`;
 
 // 5.) indexOf(substring): Returns the index of the first occurrence of the specified substring. 
 // Returns -1 if the substring is not found.
-// let str = "Hello, World!";
-// console.log(str.indexOf("World")); // Output: 7
+let str = "Hello, World!";
+console.log(str.indexOf("world")); // Output: 7
 
 // 6.) substring(start, end): Returns a portion of the string from the start index up to, 
 // but not including, the end index.
