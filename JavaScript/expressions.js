@@ -8,7 +8,7 @@
 // e.g
 42;           // A numeric literal expression
 "Hello";      // A string literal expression
-true;         // A boolean literal expression
+true;         // A boolean literal expressionb
 
 
 // Arithmetic Expressions:

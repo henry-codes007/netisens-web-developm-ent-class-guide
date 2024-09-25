@@ -7,13 +7,16 @@
     
 </head>
 <style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
     body{
         display: grid;
-        justify-items: center;
-        align-items: center;
-        place-items: item;
-        
-        
+        justify-content: center;
+        height: 100vh;
+        background-color: #9b9e9c;        
     }
 
     button{
@@ -22,19 +25,42 @@
         box-sizing: border-box;
         height: 100px;
         width: 100px;
-        background-color: blue;
+        background-color: rgb(130, 130, 133);
         color: white;
         font-size: 20px;
         border-radius: 20px;
-
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 200px;
+    }
+    label{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    form{
+        background-color: rgb(124, 84, 84);
+        width: 200px;
+        height: 100px;
+        margin: 100px;
     }
 
+
 </style>
-<body>
+<body></body>
+<form action="">
+    <label for="name">First name</label>
+    <input type="text" placeholder="Enter your name">
+    <label for="occupation">First name</label>
+    <input type="text"  name="" id="occupation" placeholder="Enter your occupation">
+</form>
+    <button id="myButton">click me</button>
     <button id="myButton">click me</button>
     <script src="event-listeners.js"></script>
     
-</body>
+</bod,formy>
 <script>
 
 </script>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Themed Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    background-color: #4285F4;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 50px 0;
+    padding: 100px;
+    background-color: #e0f7fa;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #4285F4;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    font-size: 40px;
+    color: #3f639c;
+    margin: 20px ;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #34a853;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1rem;
+}
+
+/* Services Section */
+#services {
+    padding: 50px;
+    text-align: center;
+}
+
+.service-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.service {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: #ea4335;
+}
+
+.service p {
+    font-size: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input, #contact textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    background-color: #ea4335;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    padding: 10px 0;
+    background-color: #4285F4;
+    color: white;
+    text-align: center;
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="hero">
+        <h1>Welcome to MY website</h1>
+        <p>Anna Cherry Trade</p>
+        <button onclick="showAlert()">Explore Now</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Google</h2>
+        <p>Google's mission is to organize the world's information and make it universally accessible and useful.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <div class="service">
+                <h3>Search Engine</h3>
+                <p>Find answers to your questions with the most powerful search engine.</p>
+            </div>
+            <div class="service">
+                <h3>Gmail</h3>
+                <p>Stay connected with Google’s robust email service.</p>
+            </div>
+            <div class="service">
+                <h3>Google Drive</h3>
+                <p>Store your files securely and access them from anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email">
+            <textarea id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Google. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

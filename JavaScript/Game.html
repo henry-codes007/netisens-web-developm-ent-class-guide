@@ -16,7 +16,7 @@
         }
         .container {
             background-color: white;
-            padding: 30px;
+            padding: 100px;
             border-radius: 10px;
             display: flex;
             flex-direction: column;
@@ -44,12 +44,14 @@
             align-items: center;
             margin-bottom: 10px;
             border-radius: 10px;
+            gap: 30px;
         }
         .buttons {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap:  15px;
             border-radius: 15px;
+            /* margin-top: 60px;/ */
         }
         .buttons button {
             width: 100px;
@@ -60,9 +62,16 @@
             border: none;
             cursor: pointer;
             border-radius: 20px;
+            box-shadow: 0dvb4px 2px 2px blue;
+            padding-block: 60px;               
+            }
+            @media (max-width: 380px) {
+                
+            }
+
 
          
-        }
+        
         .buttons button.enter {
             grid-column: span 2;
             width: 200px;
@@ -78,11 +87,13 @@
         <div class="display">
             <div>
                 <div class="score">0</div>
-                <span><b>Computer</b></span>
+                <!-- <span>-</span> -->
+                <h1>Computer</h1>
             </div>
             <div>
                 <div class="score">0</div>
-                <span><b>User</b></span>
+                <!-- <span>-</span> -->
+                <h1>User</h1>
             </div>
         </div>
 
@@ -97,7 +108,7 @@
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button class="enter">Enter</button>
+            <button class="enter">Play</button>
         </div>
     </div>
 
