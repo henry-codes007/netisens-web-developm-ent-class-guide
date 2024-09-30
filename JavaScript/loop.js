@@ -18,5 +18,4 @@ const myStudent = {
     },
     calculateAverageScore:() => {
     }
-  
-   }
+}
