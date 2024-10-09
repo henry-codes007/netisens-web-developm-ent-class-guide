@@ -12,9 +12,9 @@
 //     console.log(num);
 // }
 
-// for(let num = 3; num < 20; num+=3){
-//     console.log(num);
-// }
+for(let num = 3; num < 20; num+=3){
+    console.log(num);
+}
 
 // for(let num = 0; num < 20; num++){
 //     if(num >= 3){
