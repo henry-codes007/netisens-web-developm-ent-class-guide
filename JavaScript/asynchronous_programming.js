@@ -3,202 +3,152 @@
 // This is known as asynchronous programming.
 
 // Why is Asynchronous Programming Important?
-// When you're doing tasks that take some time to complete (like reading a file or fetching data from an API), you don't want the entire program to stop and wait. 
+// When you're doing tasks that take some time to complete (like reading a file or fetching data from an API), 
+// you don't want the entire program to stop and wait. 
 // Instead, JavaScript can continue to run other code while it waits for the slow task to finish.
 
 // Asynchronous Programming with Callbacks
 // Callbacks are often used to handle asynchronous operations. 
 // Let's look at an example of how they work.
 
+// console.log('one');
+// console.log('two');
+// console.log('three');
+
 
 // console.log("Task 1: Start");
-console.log("Task 1: Start");
 
-// // Callback function executed after 2 seconds (2000 milliseconds)
+// const displaySomething = () => {
+//   console.log("Task 2: This is delayed by 5 seconds");
+// }
+
+// Callback function executed after 2 seconds (2000 milliseconds)
+// setTimeout(displaySomething, 5000);
+
 // setTimeout(function() {
 //   console.log("Task 2: This is delayed by 2 seconds");
 // }, 2000);
-// Callback function executed after 2 seconds (2000 milliseconds)
-setTimeout(function() {
-  console.log("Task 2: This is delayed by 2 seconds");
-}, 2000);
 
 // console.log("Task 3: End");
-console.log("Task 3: End");
+// const data = { user: "Nsikak", age: 30 };
 
-function fetchData(callback) {
-  console.log("Fetching data...");
 // function fetchData(callback) {
 //   console.log("Fetching data...");
 
-  // Simulate a delay (e.g., fetching data from an API)
-  setTimeout(() => {
-    const data = { user: "Nsikak", age: 26 };
-    callback(data);
-  }, 2000); // Wait 2 seconds before executing the callback
-}
 //   // Simulate a delay (e.g., fetching data from an API)
 //   setTimeout(() => {
-//     const data = { user: "Nsikak", age: 26 };
+//     const data = { user: "Musa", age: 29 };
 //     callback(data);
 //   }, 2000); // Wait 2 seconds before executing the callback
 // }
 
-function processData(data) {
-  console.log(`User: ${data.user}, Age: ${data.age}`);
-}
-// function processData(data) {
-//   console.log(`User: ${data.user}, Age: ${data.age}`);
+// console.log(data)
+// function processData(parameter) {
+//   console.log(`User: ${parameter.user}, Age: ${parameter.age}`);
 // }
 
-// Passing 'processData' as a callback to 'fetchData'
-fetchData(processData);
+// function sayHello(data){
+//   console.log(data);
+// }
+
 // // Passing 'processData' as a callback to 'fetchData'
 // fetchData(processData);
+// fetchData(sayHello);
 
-
+// CALLBACJK FUNCTION: A function pass in as an aquiment as another function
 
 // Callback Hell Example
 // Callback Hell happens when you have too many nested callbacks, making the code hard to read and maintain.
 // Let's simulate a scenario where we need to fetch user details, process them, and save them to a database:
 
-function getUser(callback) {
-  setTimeout(() => {
-      callback({ name: "Nsikak" });
-  }, 1000);
-}
-function getAge(user, callback) {
-  setTimeout(() => {
-      callback({ ...user, age: 26 });
-  }, 1000);
-}
-function saveToDatabase(user, callback) {
-  setTimeout(() => {
-      callback("User saved to database: " + JSON.stringify(user));
-  }, 1000);
-}
-// This results in nested callbacks, which is known as "callback hell"
-getUser((user) => {
-  getAge(user, (userWithAge) => {
-      saveToDatabase(userWithAge, (message) => {
-          console.log(message); // Output: User saved to database: {"name":"Nsikak","age":26}
-      });
-  });
-});
 // function getUser(callback) {
-//   setTimeout(() => {
-//       callback({ name: "Nsikak" });
-//   }, 1000);
+  // console.log('running getUser');
+  // setTimeout(() => {
+    // console.log('running getUser Callback');    
+      // callback({ name: "Nsikak" });
+  // }, 3000);
 // }
+// 
 // function getAge(user, callback) {
-//   setTimeout(() => {
-//       callback({ ...user, age: 26 });
-//   }, 1000);
+  // setTimeout(() => {
+      // callback({ ...user, age: 45 });
+  // }, 3000);
 // }
-// function saveToDatabase(user, callback) {
-//   setTimeout(() => {
-//       callback("User saved to database: " + JSON.stringify(user));
-//   }, 1000);
+// 
+// function getLocation(user, callback) {
+  // setTimeout(() => {
+    // callback({ ...user, location: "Nigeria" });  // Add location to user and pass it to the callback
+  // }, 1000);
 // }
-// // This results in nested callbacks, which is known as "callback hell"
-// getUser((user) => {
-//   getAge(user, (userWithAge) => {
-//       saveToDatabase(userWithAge, (message) => {
-//           console.log(message); // Output: User saved to database: {"name":"Nsikak","age":26}
-//       });
-//   });
+// 
+// const nameLogger = (dataObject) => {
+  // console.log(dataObject); 
+  // getAge(dataObject, nameAndAgeLogger);  // Call getAge with the updated user object 
+// }
+// 
+// const nameAndAgeLogger = (dataObject) => {
+  // console.log(dataObject);  
+  // getLocation(dataObject, nameAndAgeAndLocationLogger);  // Call getLocation with the updated user object
+// }
+// 
+// const nameAndAgeAndLocationLogger = (dataObject) => {
+  // console.log(dataObject);  
+// }
+
+// This results in nested callbacks, which is known as "callback hell"
+//  getUser ((user) => {
+  // console.log("User fetched:", user);
+  // getAge(user, (userWithAge) => {
+    // console.log("Age fetched:", userWithAge);
+    // getLocation(userWithAge, (message) => {
+          // console.log(message); 
+      // });
+  // });
 // });
+const date = new Date("2022-03-25");
+
+// getUser(nameLogger);
+// getUser(nameLogger);
+
+
+const doings = () => {
+  setTimeout(() => {
+    console.log('Decide what you want to chop'); 
+    setTimeout(() => {
+      console.log('I want to eat Indomie noodles');
+      setTimeout(() => {
+        console.log('I just bought three cartons of Indomie noodles');
+        setTimeout(() => {
+          console.log('I just placed a sauce-pan on fire');
+          setTimeout(() => {
+            console.log('I have added some water to the pot');
+            setTimeout(() => {
+              console.log('The water is boiling');
+              setTimeout(() => {
+                console.log('I successfully added my noodles to the pan');
+                setTimeout(() => {
+                  console.log('My Delicious pan of noodles is ready');
+                  setTimeout(() => {
+                    console.log('I have hurriedly and successfully finished all my Noodles')
+                  }, 1000)
+                }, 5000)
+              }, 1000)
+            }, 4000)
+          }, 1000)
+        }, 1000)
+      }, 3000)
+    }, 2000)   
+  }, 0)
+}
+// doings(); 
+
 
 // Callback Hell makes code harder to follow. Promises and async/await can help solve this problem.
 
-// @@ -84,55 +84,55 @@
-//   Fulfilled: The operation completed successfully.
-//   Rejected: The operation failed.
 
-const myPromise = new Promise((resolve, reject) => {
-  // Simulate an asynchronous operation
-  const success = false;
-// const myPromise = new Promise((resolve, reject) => {
-//   // Simulate an asynchronous operation
-//   const success = false;
-
-  setTimeout(() => {
-    if (success) {
-      resolve("Operation successful!");
-    } else {
-      reject("Operation failed!");
-    }
-  }, 2000);
-});
-//   setTimeout(() => {
-//     if (success) {
-//       resolve("Operation successful!");
-//     } else {
-//       reject("Operation failed!");
-//     }
-//   }, 2000);
-// });
-
-console.log('myPromise >>>', myPromise)
-// console.log('myPromise >>>', myPromise)
-
-//   Handling a Promise
-//   We can handle promises using .then() and .catch().
-
-myPromise
-.then((message) => {
-  console.log(message); // Output: Operation successful!
-})
-.catch((error) => {
-  console.log(error); // If failed, output: Operation failed!
-});
-// myPromise
-// .then((message) => {
-//   console.log(message); // Output: Operation successful!
-// })
-// .catch((error) => {
-//   console.log(error); // If failed, output: Operation failed!
-// });
-
-
-// Chaining Promises
-// When you have multiple asynchronous tasks, you can chain promises to handle them in order.
-
-const fetchUser = new Promise((resolve, reject) => {
-setTimeout(() => resolve({ user: "Nsikak" }), 1000);
-});
-// const fetchUser = new Promise((resolve, reject) => {
-// setTimeout(() => resolve({ user: "Nsikak" }), 1000);
-// });
-
-const fetchAge = new Promise((resolve, reject) => {
-setTimeout(() => resolve({ age: 26 }), 1000);
-});
-// const fetchAge = new Promise((resolve, reject) => {
-// setTimeout(() => resolve({ age: 26 }), 1000);
-// });
-
-fetchUser
-.then((userData) => {
-  console.log(userData); // Output: { user: "Nsikak" }
-  return fetchAge;
-})
-.then((ageData) => {
-  console.log(ageData); // Output: { age: 26 }
-})
-.catch((error) => {
-  console.error(error);
-});
-// fetchUser
-// .then((userData) => {
-//   console.log(userData); // Output: { user: "Nsikak" }
-//   return fetchAge;
-// })
-// .then((ageData) => {
-//   console.log(ageData); // Output: { age: 26 }
-// })
-// .catch((error) => {
-//   console.error(error);
-//
-
-
+const acting = () => {
+  setTimeout (() => {
+    console.log('please dont disturb');
+  },10000)
+}
+acting();
