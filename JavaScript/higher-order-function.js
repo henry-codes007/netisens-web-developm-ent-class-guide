@@ -119,31 +119,31 @@
 // const allEven = numbers.every((number) => number % 2 === 0);
 // console.log(allEven); // Output: false (because not all numbers are even)
 // Using a Custom Higher-Order Function with a Callback
-// function repeatAction(n, action) {
-    // for (let i = 0; i < n; i++) {
-      // action(i);
-    // }
-  // }
+function repeatAction(n, action) {
+    for (let i = 0; i < n; i++) {
+      action(i);
+    }
+  }
   
-  // repeatAction(3, (i) => {
-    // console.log(`This is iteration ${i + 1}`);
-  // });
-// console.log("Task 1: Start");
-// // Callback function executed after 2 seconds (2000 milliseconds)
-// setTimeout(function() {
-//   console.log("Task 2: This is delayed by 2 seconds");
-// }, 2000);
-// console.log("Task 3: End");
-// console.log("Starting countdown...");
-// let counter = 5;
-// const countdown = setInterval(function() {
-//   console.log(counter);
-//   counter--;
-//   if (counter === 0) {
-//     console.log("Liftoff!");
-//     clearInterval(countdown); // Stops the interval
-//   }
-// }, 1000); // Interval of 1 second
+  repeatAction(3, (i) => {
+    console.log(`This is iteration ${i + 1}`);
+  });
+console.log("Task 1: Start");
+// Callback function executed after 2 seconds (2000 milliseconds)
+setTimeout(function() {
+  console.log("Task 2: This is delayed by 2 seconds");
+}, 2000);
+console.log("Task 3: End");
+console.log("Starting countdown...");
+let counter = 5;
+const countdown = setInterval(function() {
+  console.log(counter);
+  counter--;
+  if (counter === 0) {
+    console.log("Liftoff!");
+    clearInterval(countdown); // Stops the interval
+  }
+}, 1000); // Interval of 1 second
 // CLASS WORK
 // Question 1: Timer Functions
 // Write a function startCountdown that accepts two parameters:
